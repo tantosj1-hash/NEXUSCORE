@@ -175,6 +175,7 @@
         <a class="btn btn-contorno" href="#planos">Ver planos e preços</a>
       </div>
       <div class="garantias">
+        <span>Atendimento 100% online</span>
         <span>Pronto em até 7 dias úteis</span>
         <span>Funciona no celular</span>
         <span>Botão de WhatsApp integrado</span>
@@ -348,7 +349,7 @@
   const CONFIG = {
     marca: ['Nexus', 'Core'],          // nome da marca: [parte branca, parte colorida]
     whatsapp: '5573999036241',         // DDI + DDD + número, só dígitos
-    cidade: 'Goiânia - GO',
+    cidade: 'Todo o Brasil',
     portfolioUrl: 'https://luzjardimdaluz.com.br',
     precos: {
       basico: 'R$ 857',
@@ -373,7 +374,7 @@
   document.querySelector('[data-config="marca"]').innerHTML = `${CONFIG.marca[0]}<span>${CONFIG.marca[1]}</span>`;
   document.querySelector('[data-config="marcaTexto"]').textContent = CONFIG.marca.join('');
   document.querySelector('[data-config="cidade"]').textContent = CONFIG.cidade;
-  document.querySelector('[data-config="cidadeRotulo"]').textContent = `Sites profissionais · ${CONFIG.cidade}`;
+  document.querySelector('[data-config="cidadeRotulo"]').textContent = `Sites e segurança · ${CONFIG.cidade}`;
   document.querySelector('[data-config-href="portfolioUrl"]').href = CONFIG.portfolioUrl;
   document.getElementById('ano').textContent = new Date().getFullYear();
 
