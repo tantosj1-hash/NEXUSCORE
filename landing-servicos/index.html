@@ -379,7 +379,8 @@
     window.addEventListener('resize', dimensionar);
 
     const desenhar = (tempo) => {
-      const ay = tempo * 0.00018, ax = 0.35 + Math.sin(tempo * 0.0001) * 0.15;
+      // uma volta a cada ~15 s; com "reduzir movimento" gira mais devagar
+      const ay = tempo * (reduzido ? 0.00015 : 0.00042), ax = 0.35 + Math.sin(tempo * 0.0001) * 0.15;
       const [sy, cyR, sx, cxR] = [Math.sin(ay), Math.cos(ay), Math.sin(ax), Math.cos(ax)];
       ctx.clearRect(0, 0, w, h);
 
@@ -410,7 +411,7 @@
           : `rgba(160, 235, 255, ${0.2 + prof * 0.7})`;
         ctx.beginPath(); ctx.arc(x, y, (destaque ? 2.6 : 1.6) * (0.6 + prof), 0, Math.PI * 2); ctx.fill();
       }
-      if (!reduzido) requestAnimationFrame(desenhar);
+      requestAnimationFrame(desenhar);
     };
     requestAnimationFrame(desenhar);
   })();
