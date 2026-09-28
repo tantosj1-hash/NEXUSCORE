@@ -77,6 +77,8 @@
 
     .grade { display: grid; gap: 20px; margin-top: 36px; }
     .grade-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grade-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .nota { font-size: .85rem; margin-top: 20px; }
     .cartao {
       background: var(--cinza); border: 1px solid var(--borda);
       border-radius: 16px; padding: 28px; display: flex; flex-direction: column;
@@ -230,6 +232,44 @@
     </div>
   </section>
 
+  <section id="seguranca">
+    <div class="container">
+      <p class="rotulo">Segurança</p>
+      <h2>Proteja seu site e seus sistemas</h2>
+      <p class="sub">Vazamento de dados, site invadido ou fora do ar custa caro e queima a reputação. Encontre as falhas antes de quem tem más intenções.</p>
+      <div class="grade grade-2">
+        <div class="cartao">
+          <h3>Consultoria de Segurança</h3>
+          <p>Para sites e sistemas que precisam de uma revisão de segurança e um plano claro do que corrigir.</p>
+          <div class="preco" data-preco="seguranca"></div>
+          <ul>
+            <li>Análise de configuração do site, servidor e domínio</li>
+            <li>Revisão de senhas, acessos e permissões</li>
+            <li>Verificação de backups e certificado SSL (HTTPS)</li>
+            <li>Adequação básica à LGPD</li>
+            <li>Relatório com as falhas e plano de correção priorizado</li>
+          </ul>
+          <a class="btn btn-contorno" data-whats="Olá! Tenho interesse na Consultoria de Segurança.">Solicitar</a>
+        </div>
+        <div class="cartao destaque">
+          <span class="selo">TESTE DE INVASÃO</span>
+          <h3>Pentest de Site</h3>
+          <p>Simulamos um ataque real, de forma controlada, para descobrir por onde alguém poderia invadir.</p>
+          <div class="preco" data-preco="pentest"></div>
+          <ul>
+            <li>Testes baseados no OWASP Top 10</li>
+            <li>Busca por falhas de login, formulários e injeção de código</li>
+            <li>Relatório técnico e resumo executivo</li>
+            <li>Recomendações de correção para cada falha</li>
+            <li>Reteste gratuito após as correções</li>
+          </ul>
+          <a class="btn" data-whats="Olá! Tenho interesse em um Pentest no meu site.">Solicitar</a>
+        </div>
+      </div>
+      <p class="sub nota">O valor final depende do tamanho do site ou sistema. O pentest só é feito com autorização por escrito do responsável e escopo definido em contrato.</p>
+    </div>
+  </section>
+
   <!-- Portfólio oculto por enquanto: remova o atributo hidden para exibir -->
   <section hidden>
     <div class="container">
@@ -279,10 +319,12 @@
       <form id="form-orcamento">
         <label>Seu nome <input name="nome" required autocomplete="name"></label>
         <label>Nome da igreja ou empresa <input name="empresa" required></label>
-        <label>Plano de interesse
+        <label>Serviço de interesse
           <select name="plano">
             <option>Página Única</option>
             <option selected>Site Completo</option>
+            <option>Consultoria de Segurança</option>
+            <option>Pentest de Site</option>
             <option>Ainda não sei</option>
           </select>
         </label>
@@ -305,13 +347,15 @@
   // ===== EDITE AQUI =====
   const CONFIG = {
     marca: ['Nexus', 'Core'],          // nome da marca: [parte branca, parte colorida]
-    whatsapp: '5562982069470',         // DDI + DDD + número, só dígitos
+    whatsapp: '5573999036241',         // DDI + DDD + número, só dígitos
     cidade: 'Goiânia - GO',
     portfolioUrl: 'https://luzjardimdaluz.com.br',
     precos: {
       basico: 'R$ 857',
       completo: 'R$ 1.497',
       manutencao: 'R$ 97<small>/mês</small>',
+      seguranca: '<small>a partir de</small> R$ 1.297',
+      pentest: '<small>a partir de</small> R$ 2.997',
     },
   };
   // ======================

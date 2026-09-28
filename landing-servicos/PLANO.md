@@ -28,6 +28,8 @@ como portfólio.
 | Página Única | R$ 857 | ~1 dia |
 | Site Completo | R$ 1.497 | 3–5 dias (reaproveitando o código da igreja) |
 | Manutenção | R$ 97/mês | ~1 h/mês por cliente |
+| Consultoria de Segurança | a partir de R$ 1.297 | 1–2 dias |
+| Pentest de Site | a partir de R$ 2.997 | 3–5 dias + relatório |
 
 São valores de partida, não pesquisa de mercado. Compare com 3 ou 4 freelancers
 da sua cidade no Instagram e no Workana antes de fechar. O dinheiro recorrente
@@ -35,6 +37,9 @@ está na **manutenção**: 10 clientes = ~R$ 970/mês.
 
 **Vantagem:** o site da igreja já tem calendário, galeria e área de líderes
 prontos. Para outra igreja, é trocar cores, textos e fotos. Margem alta.
+
+**Pentest:** só com autorização por escrito do dono do site e escopo em
+contrato. Testar sistema de terceiros sem autorização é crime (Lei 12.737/2012).
 
 ## 3. Onde achar clientes
 
