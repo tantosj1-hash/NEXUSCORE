@@ -1,0 +1,44 @@
+name: Publicar página Nexus Core no Firebase
+
+on:
+  push:
+    branches: [main, claude/gracious-clarke-neb2xc]
+    paths:
+      - "landing-servicos/**"
+      - ".github/workflows/deploy-landing.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-landing
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Conferir configuração
+        env:
+          PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
+          HAS_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
+        run: |
+          if [ -z "$PROJECT_ID" ]; then
+            echo "::error::Falta a variável FIREBASE_PROJECT_ID (Settings > Secrets and variables > Actions > Variables)."
+            exit 1
+          fi
+          if [ "$HAS_KEY" != "true" ]; then
+            echo "::error::Falta o secret FIREBASE_SERVICE_ACCOUNT (Settings > Secrets and variables > Actions > Secrets)."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v4
+
+      - name: Publicar no Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          entryPoint: landing-servicos
+          channelId: live
