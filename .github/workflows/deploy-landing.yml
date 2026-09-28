@@ -20,13 +20,8 @@ jobs:
     steps:
       - name: Conferir configuração
         env:
-          PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
           HAS_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
         run: |
-          if [ -z "$PROJECT_ID" ]; then
-            echo "::error::Falta a variável FIREBASE_PROJECT_ID (Settings > Secrets and variables > Actions > Variables)."
-            exit 1
-          fi
           if [ "$HAS_KEY" != "true" ]; then
             echo "::error::Falta o secret FIREBASE_SERVICE_ACCOUNT (Settings > Secrets and variables > Actions > Secrets)."
             exit 1
@@ -39,6 +34,6 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          projectId: nexuscore-cb3cf
           entryPoint: landing-servicos
           channelId: live
