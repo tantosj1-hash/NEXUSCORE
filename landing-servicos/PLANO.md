@@ -6,20 +6,26 @@ como portfólio.
 
 ## 1. Publicar a página (15 min)
 
-1. Edite o bloco `CONFIG` no fim de `index.html`: nome da marca, WhatsApp
-   (só dígitos, com 55 + DDD), cidade e preços.
-2. Publique de graça. Escolha uma opção:
-   - **Firebase Hosting**: `firebase init hosting` num projeto novo,
-     `public` = `landing-servicos`, depois `firebase deploy`.
-   - **GitHub Pages**: crie um repositório só com este `index.html` e ative
-     Pages em Settings > Pages.
+1. Se precisar mudar algo, edite o bloco `CONFIG` no fim de `index.html`:
+   nome da marca, WhatsApp (só dígitos, com 55 + DDD), cidade e preços.
+2. Publique de graça no Firebase Hosting, num projeto **separado** do site da
+   igreja (senão o deploy substitui o site da igreja):
+   1. Em [console.firebase.google.com](https://console.firebase.google.com),
+      crie um projeto novo (ex.: `nexus-core-sites`). Não precisa de cartão.
+   2. No terminal, dentro da pasta `landing-servicos`:
+      ```bash
+      npm install -g firebase-tools   # se ainda não tiver
+      firebase login
+      firebase deploy --only hosting --project ID-DO-PROJETO
+      ```
+   3. O site fica em `https://ID-DO-PROJETO.web.app`.
 3. Coloque o link na bio do Instagram e no status do WhatsApp.
 
 ## 2. Preços sugeridos (ajuste à sua realidade)
 
 | Plano | Preço | Tempo seu |
 |---|---|---|
-| Página Única | R$ 697 | ~1 dia |
+| Página Única | R$ 857 | ~1 dia |
 | Site Completo | R$ 1.497 | 3–5 dias (reaproveitando o código da igreja) |
 | Manutenção | R$ 97/mês | ~1 h/mês por cliente |
 
