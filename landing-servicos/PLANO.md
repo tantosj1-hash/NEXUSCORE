@@ -25,19 +25,18 @@ como portfólio.
 
 | Plano | Preço | Tempo seu |
 |---|---|---|
-| Página Única | R$ 997 | ~1 dia |
-| Site Completo | R$ 2.497 | 3–5 dias (reaproveitando o código da igreja) |
-| Manutenção | R$ 147/mês | ~1 h/mês por cliente |
-| Consultoria de Segurança | a partir de R$ 1.997 | 1–2 dias |
-| Pentest de Site | a partir de R$ 3.997 | 3–5 dias + relatório |
+| Página Única | R$ 857 | ~1 dia |
+| Site Completo | R$ 1.497 | 3–5 dias (reaproveitando o código da igreja) |
+| Manutenção | R$ 97/mês | ~1 h/mês por cliente |
+| Consultoria de Segurança | a partir de R$ 1.297 | 1–2 dias |
+| Pentest de Site | a partir de R$ 2.497 | 3–5 dias + relatório |
 
-Valores revisados em outubro/2026 com base em pesquisas de mercado: landing
+Referência de mercado (pesquisa de outubro/2026): landing
 page a partir de ~R$ 900; site institucional com freelancer entre R$ 2.000 e
 R$ 6.000; manutenção básica R$ 100–400/mês; análise de vulnerabilidades
 R$ 2.000–8.000; pentest de site simples R$ 3.000–6.000 (mercado geral
-R$ 3.000–60.000). Os preços ficam na faixa de entrada para atrair os primeiros
-clientes. O dinheiro recorrente
-está na **manutenção**: 10 clientes = ~R$ 1.470/mês.
+R$ 3.000–60.000). Hoje os preços estão abaixo dessas faixas, como estratégia de entrada. O dinheiro recorrente
+está na **manutenção**: 10 clientes = ~R$ 970/mês.
 
 **Vantagem:** o site da igreja já tem calendário, galeria e área de líderes
 prontos. Para outra igreja, é trocar cores, textos e fotos. Margem alta.
